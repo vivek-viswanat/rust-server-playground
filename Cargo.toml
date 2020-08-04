@@ -1,0 +1,27 @@
+[package]
+name = "rust-playground"
+version = "0.1.0"
+authors = ["Vivek Viswanathan <vivek.viswanathan@compass.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "0.2", features = ["macros"] }
+warp = "0.2"
+
+# serialization utilities
+serde = "1.0"
+serde_json = "1.0"
+serde_urlencoded = "0.6"
+serde_derive = "1.0"
+
+# used for handling errors
+thiserror = "1.0"
+
+# async db drivers
+mobc-postgres = { version = "0.5", features = ["with-chrono-0_4"] }
+mobc = "0.5"
+
+# time utilities
+chrono = { version = "0.4", features = ["serde"] }
